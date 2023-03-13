@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  outline: none;
+}
+.width-box .row{
+   max-width: 1280px;
+   width: 100%;
+   margin: 0 auto;
+}
+section, header{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.containerStart{
+  height: 100vh;
+  background-image: url('./Img/fondo-hiperespacial.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+}
+.d-flex-center{
+  display: flex;
+  justify-content: center;
+}
+.btn-Start{
+  width: 70%;
+  background-color: transparent;
+  border: 5px solid #87F54E;
+  padding: 10px;
+}
