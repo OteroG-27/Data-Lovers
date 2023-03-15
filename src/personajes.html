@@ -4,47 +4,81 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- <div id="root"></div> -->
-    <main class="">
+    <main class="characterContainer">
       <header>
         <div>
-          <img src="./Img/RickAndMorty.png" alt="Logo Rick And Morty">
+          <img src="./Img/logo.png" alt="Logo Rick And Morty">
         </div>
-        <nav>
+        <nav class="menu">
           <a href="./personajes.html">Personajes</a>
           <a href="./planetas.html">Planetas</a>
           <a href="./Episodios.html">Episodios</a>
         </nav>
       </header>
-      <section>
+      <section class="grid-item-center">
         <img src="./Img/RickAndMorty.png" alt="Logo Rick And Morty">
         <form action="">
-          <input type="search" placeholder="Filtrar por nombre...">
-          <input type="submit" placeholder="Species">
-          <select>
+          <div class="formM">
+            <input type="search" class="inputFilter" placeholder="Filtrar por nombre...">
+          <select class="inputFilter">
+            <option value="Species">Species</option>
+          </select>
+          <select class="inputFilter">
             <option value="Especies">Especies</option>
           </select>
-          <select>
+          <select class="inputFilter">
             <option value="Genero">Genero</option>
           </select>
-          <select>
+          <select class="inputFilter">
             <option value="Estado">Estado</option>
           </select>
+          </div>
         </form>
       </section>
-      <section>
-        <div>
-          <div>
+      <section class="sectionCharacter">
+        <div class="character">
+          <div class="c-img">
             <img src="./Img/rickk.png">
           </div>
-          <div>
-            <p>Go</p>
-            <p>Name:</p>
-            <p>Rick Sanchez</p>
-            <b>Status:</b>
-            <p>Alive</p>
+          <div class="c-info">
+            <p class="btnGO">Go</p>
+            <h3>Name:</h3>
+            <p class="descripcion">Rick Sanchez</p>
+            <h3>Status:</h3>
+            <p class="descripcion">Alive</p>
+          </div>
+        </div>
+        <div class="character">
+          <div class="c-img">
+            <img src="./Img/rickk.png">
+          </div>
+          <div class="c-info">
+            <p class="btnGO">Go</p>
+            <h3>Name:</h3>
+            <p class="descripcion">Rick Sanchez</p>
+            <h3>Status:</h3>
+            <p class="descripcion">Alive</p>
+          </div>
+        </div>
+        <div class="character">
+          <div class="c-img">
+            <img src="./Img/rickk.png">
+          </div>
+          <div class="c-info">
+            <p class="btnGO">Go</p>
+            <h3>Name:</h3>
+            <p class="descripcion">Rick Sanchez</p>
+            <h3>Status:</h3>
+            <p class="descripcion">Alive</p>
           </div>
         </div>
       </section>
