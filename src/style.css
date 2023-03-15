@@ -10,12 +10,14 @@
    margin: 0 auto;
 }
 main{
-  height: 100vh;
   font-family: 'Krub', sans-serif;
 }
 section, header, footer{
   padding-left: 7%;
   padding-right: 7%;
+}
+section{
+  margin-bottom: 3%;
 }
 .containerStart{
   background-image: url('./Img/fondo-hiperespacial.png');
@@ -30,10 +32,11 @@ section, header, footer{
   justify-content: center;
 }
 .btn-Start{
-  width: 70%;
+  width: 20%;
   background-color: transparent;
   border: 5px solid #87F54E;
   padding: 10px;
+  margin-top: 50px;
 }
 .Personajes-Planetas-Episodios{
     display: flex;
@@ -82,17 +85,20 @@ header{
 }
 .formM{
   display: flex;
-  gap: 60px;
+  gap: 20px;
 }
 .sectionCharacter{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 25px;
 }
 .c-img {
   margin-bottom: -5px;
 }
 .c-img img{
-  border-radius: 35px 35px;
+  border-radius: 35px 35px 0 0;
+  width: 240.51px;
+  height: 260px;
 }
 .c-info {
   height: 130.12px;
@@ -105,21 +111,20 @@ header{
 .c-info h3{
   font-family: 'IBM Plex Mono';
   font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   color: #4D4D4D;
 }
 .c-info .descripcion{
   font-family: 'IBM Plex Mono';
-  font-size: 24px;
+  font-size: 15px;
   color: #4D4D4D;
 }
 .btnGO{
   position: absolute;
-  width: 93.85px;
-  height: 83.04px;
-  left: 190px;
-  bottom: 125px;
+  width: 64.85px;
+  height: 51.04px;
+  left: 155px;
+  bottom: 140px;
   background: #272727;
   border: 4px solid #87F54E;
   box-shadow: 0px 0px 12px rgb(0 0 0 / 25%);
