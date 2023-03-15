@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .width-box .row{
    max-width: 1728px;
@@ -11,6 +11,7 @@
 }
 main{
   font-family: 'Krub', sans-serif;
+  color: white;
 }
 section, header, footer{
   padding-left: 7%;
@@ -30,6 +31,9 @@ section{
 .d-flex-center{
   display: flex;
   justify-content: center;
+}
+.logoPrincipal{
+  margin-bottom: 40px;
 }
 .btn-Start{
   width: 20%;
@@ -63,7 +67,7 @@ header{
     font-weight: bold;
 }
 .menu a{
-    color: #87F54E;
+    color: #FFFF;
     font-size: 20px;
     font-weight: bold;
 }
@@ -135,4 +139,24 @@ header{
   color: #87F54E;
   font-size: 28px;
   font-weight: bold;
+}
+.footerM{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: #2727279c;
+}
+.gitHub{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.gitHub p{
+ color: #FFFF;
+ font-weight: bold;
+}
+.logoFooter{
+  border-right: 1px solid;
+  padding-right: 40px;
 }
