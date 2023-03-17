@@ -87,10 +87,10 @@ header{
 .inputFilter::placeholder{
   color: #87F54E;
 }
-.formM{
+/* .formM{
   display: flex;
   gap: 20px;
-}
+} */
 .sectionCharacter{
   display: flex;
   justify-content: center;
@@ -144,8 +144,9 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 100%;
   background-color: #2727279c;
+  padding: 20px 7% 20px 7%;
 }
 .gitHub{
   display: flex;
@@ -154,9 +155,31 @@ header{
 }
 .gitHub p{
  color: #FFFF;
+ font-size: 20px;
  font-weight: bold;
 }
 .logoFooter{
   border-right: 1px solid;
   padding-right: 40px;
+}
+
+@media (max-width: 1130px) {
+  .footerM{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+  .logoFooter {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .menu{
+    padding: 15px 0 15px;
+  }
+  .containerGitHub{
+    place-self: center;
+  }
 }
