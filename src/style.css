@@ -59,6 +59,8 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 15vh;
+    background-color: #2727279c;
+    margin-bottom: 30px;
 }
 .menu{
     display: flex;
