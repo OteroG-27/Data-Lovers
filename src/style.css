@@ -60,7 +60,7 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 15vh;
-    background-color: #2727279c;
+    /* background-color: #2727279c; */
     margin-bottom: 30px;
 }
 .menu{
@@ -70,7 +70,7 @@ header{
     font-weight: bold;
 }
 .menu a{
-    color: #FFFF;
+    color: #87F54E;
     font-size: 20px;
     font-weight: bold;
 }
@@ -166,7 +166,11 @@ header{
   padding-right: 40px;
 }
 /* Inicio de personaje detalles  */
-
+.personajeDetalles{
+  background: white;
+  border-radius: 46px;
+  padding: 60px;
+}
 
 
 @media (max-width: 1130px) {
