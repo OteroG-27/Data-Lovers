@@ -21,6 +21,7 @@ section{
   margin-bottom: 3%;
 }
 .containerStart{
+  height: 100vh;
   background-image: url('./Img/fondo-hiperespacial.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -164,6 +165,9 @@ header{
   border-right: 1px solid;
   padding-right: 40px;
 }
+/* Inicio de personaje detalles  */
+
+
 
 @media (max-width: 1130px) {
   .footerM{
