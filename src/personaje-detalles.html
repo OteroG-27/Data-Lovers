@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
   <!-- CDN Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Krub:ital@1&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
   <!-- CDN BOOTSTRAP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
@@ -31,30 +34,70 @@
           <a href="./Episodios.html">Episodios</a>
         </nav>
       </header>
-      <div class="row personajeDetalles">
-        <div class="col">
-          <img src="./Img/rick.png" alt="">
-        </div>
-        <div class="col">
-          <div>
-            <h3>Rick Sanchez</h3>
-            <ul>
-              <li>Status: <p>Alive</p></li>
-              <li>Species: <p>Human</p></li>
-              <li>Type: <p>Vacio</p></li>
-              <li>Gender: <p>Male</p></li>
-              <li>Origin: <p>Earth</p></li>
-            </ul>
-          </div>
-          <div>
-            <img src="./Img/astrofisica.png" alt="">
-            <img src="./Img/astrofisica.png" alt="">
-            <img src="./Img/astrofisica.png" alt="">
-            <img src="./Img/astrofisica.png" alt="">
-          </div>
-        </div>
-      </div>
+      <div class="row personajeDetalles" id="contenedorPersonajeDetalles"></div>
     </div>
   </div>
+  <div id="selectedCharacterId"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Obtén el ID del personaje desde el localStorage
+    let characterId = localStorage.getItem('id');
+    let personajeDetalles = document.getElementById('contenedorPersonajeDetalles');
+
+    // Verifica si se proporcionó un ID
+    if (characterId) {
+      // Hacer una llamada a la API para obtener detalles del personaje específico
+      fetch('https://rickandmortyapi.com/api/character/' + characterId)
+        .then(response => response.json())
+        .then(data => {
+          // Aquí puedes trabajar con los detalles del personaje
+          let episodios = data.episode;
+          // console.log();
+          contenedorPersonajeDetalles.innerHTML = `
+            <div class="col">
+              <img src="${data.image}" class="img-personajeDetalles" alt="${data.name}">
+            </div>
+            <div class="col ">
+              <div class="detallesBox">
+                <h2><b>${data.name}</b></h2>
+                <div class="d-flex">
+                  <ul class="listaDeDatos me-2">
+                    <li><b>Status:</b> <p>${data.status}</p></li>
+                    <li><b>Species:</b> <p>${data.species}</p></li>
+                    <li><b>Gender:</b> <p>${data.gender}</p></li>
+                    <li><b>Origin:</b> <p>${data.origin.name}</p></li>
+                  </ul>
+                  <ul class="listaDeDatos">
+                    <li><b>location:</b> <p>${data.location.name}</p></li>
+                    <li><b>Aparece En:</b> <p>${episodios.length} Episodios</p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="detallesBox d-flex justify-content-around">
+                <img src="./Img/003-gun.png" alt="">
+                <img src="./Img/006-astrofisica.png" alt="">
+                <img src="./Img/003-neptuno.png" alt="">
+                <img src="./Img/002-space.png" alt="">
+              </div>
+            </div>
+          `;
+
+        })
+        .catch(error => console.error('Error:', error));
+    } else {
+      console.error('Error: No se proporcionó un ID de personaje en el localStorage.');
+    }
+  });
+</script>
+
+<!-- <div style="position: absolute;left: 947px;bottom: 284px;">
+  <img src="./img/planet-2.png" alt="${data.name}">
+</div> -->
+
+
+
+
+
+
 </body>
 </html>
